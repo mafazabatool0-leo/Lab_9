@@ -1,0 +1,29 @@
+CS-402L Data Science Lab - Lab 9 Notes
+
+Task 1 - Housing Prices Near Transit
+- Number of records: 414
+- Expected slope: about -0.73 price units per additional 100 metres.
+- Expected prediction at 500 metres: about 42.22 price units.
+- Interpretation: the negative slope means predicted house price per unit area
+  decreases as distance from the nearest MRT station increases.
+
+Task 2 - Yacht Resistance
+- Number of experiments: 308
+- Expected linear mean CV RMSE: about 8.95.
+- Expected quadratic mean CV RMSE: about 4.19.
+- Better model: Quadratic Regression, because its mean RMSE is lower.
+
+Task 3 - Concrete Strength
+- After removing duplicates: 1005 rows.
+- Expected training rows: 804.
+- Expected test rows: 201.
+- Expected linear baseline mean CV RMSE: about 10.20 MPa.
+- Expected tuned model mean CV RMSE: about 6.09 MPa.
+- Expected tuned test RMSE: about 6.52 MPa.
+- Example degree-2 interaction: Cement * Age.
+- Scaling belongs inside the pipeline so each cross-validation training fold
+  learns its own scaling values and validation data does not leak into training.
+
+Note:
+Actual values may differ slightly depending on the supplied CSV/data files and
+their column names. Use the supplied dataset files from the lab ZIP.
